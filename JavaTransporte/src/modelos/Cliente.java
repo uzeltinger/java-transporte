@@ -29,5 +29,8 @@ public class Cliente extends Persona {
         this.cuitEmpresa = cuitEmpresa;
     }
 
-       
+    
+    public String datosC() {
+        return "Empresa: "+this.nombreEmpresa+" "+"Nombre: "+this.getNombre();
+       }
 }

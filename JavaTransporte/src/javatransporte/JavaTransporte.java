@@ -1,24 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package javatransporte;
 
+import java.util.Iterator;
+import java.util.List;
+import listados.Listados;
+import modelos.Cliente;
 import vistas.PantallaListaDeCamiones;
 
-/**
- *
- * @author Diseño gráfico
- */
+
 public class JavaTransporte {
 
-    /**
-     * @param args the command line arguments
-     */
+ 
     public static void main(String[] args) {
         // TODO code application logic here
-        new PantallaListaDeCamiones().setVisible(true);
+       // new PantallaListaDeCamiones().setVisible(true);
+        List<Cliente> clientes = new Listados().Obtenerclientes();
+        //System.out.println("Clientes: "+clientes.get(1).datosC());
+        Iterator<Cliente> iterador = clientes.iterator();
+        while(iterador.hasNext()){
+            Cliente c = iterador.next();
+            System.out.println("Cliente "+c.datosC());
+        }
     }
     
 }
