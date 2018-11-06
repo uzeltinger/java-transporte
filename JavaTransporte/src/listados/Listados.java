@@ -3,6 +3,7 @@ package listados;
 import java.util.ArrayList;
 import java.util.List;
 import modelos.Camion;
+import modelos.Cliente;
 
 public class Listados {
     public List ObtenerCamiones(){
@@ -24,5 +25,13 @@ public class Listados {
         camiones.add(new Camion("TER555","Scania","111","Camión","Sancor",true));        
         
         return camiones;
+    }
+    public List Obtenerclientes(){
+        //String nombreEmpresa, String cuitEmpresa,String nombre, String apellido, String tipoDocumento, String numeroDocumento, String direccion, Ciudad ciudad
+        List <Cliente> listadoClientes = new ArrayList();
+        listadoClientes.add(new Cliente("Fox","21341565220","Martin","Benitez","DNI","23154542","Av.Siempre vivas",null));
+        listadoClientes.add(new Cliente("Tyc","21341565444","Martin","Benitez","DNI","23154542","Av.Siempre vivas",null));
+        return listadoClientes;
+        
     }
 }
