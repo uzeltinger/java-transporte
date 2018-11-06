@@ -1,4 +1,4 @@
-package vistas;
+package tablas;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
