@@ -5,6 +5,7 @@ public class Cliente extends Persona {
     private String cuitEmpresa;
     
     public Cliente() {
+        super();
     }
     
     public Cliente(String nombreEmpresa, String cuitEmpresa, String nombre, String apellido, String tipoDocumento, String numeroDocumento, String direccion, Ciudad ciudad) {
