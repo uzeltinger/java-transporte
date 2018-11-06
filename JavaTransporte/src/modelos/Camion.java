@@ -7,6 +7,7 @@ public class Camion {
     private String tipo;
     private String seguro;
     private Boolean propio;
+    private Empleado chofer;
 
     public Camion() {
     }
@@ -66,6 +67,14 @@ public class Camion {
 
     public void setPropio(Boolean propio) {
         this.propio = propio;
+    }
+
+    public Empleado getChofer() {
+        return chofer;
+    }
+
+    public void setChofer(Empleado chofer) {
+        this.chofer = chofer;
     }
   
     @Override
