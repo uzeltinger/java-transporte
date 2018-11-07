@@ -1,11 +1,43 @@
 package listados;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import modelos.Camion;
+import modelos.Ciudad;
 import modelos.Cliente;
+import modelos.Empleado;
 
 public class Listados {
+    
+    List<Empleado> empleados = ObtenerEmpleados();
+    
+    public List ObtenerChoferes(){        
+        List<Empleado> choferes = new ArrayList();        
+        Iterator<Empleado> itE = empleados.iterator();
+        while(itE.hasNext()){
+            Empleado e = itE.next();
+            if(e.esChofer()){
+                choferes.add(e);
+            }
+        }        
+        return choferes;
+    }
+    
+    public List ObtenerEmpleados(){
+        List<Empleado> empleados = new ArrayList();        
+        // puesto,  nombre,  apellido,  tipoDocumento,  numeroDocumento,  direccion,  ciudad
+        empleados.add(new Empleado("Secretaria","Juana","García","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Chofer","Juan","García","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Chofer","Diego","Lopez","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Chofer","Pedro","Martinez","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Chofer","Claudio","Pareto","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Chofer de Reparto","Daniel","Pareto","DNI","23456789","Colón 1234",null));        
+        empleados.add(new Empleado("Receptor","Juan Jose","Pareto","DNI","23456789","Colón 1234",null));
+        empleados.add(new Empleado("Administrativo","Pepe","Mujica","DNI","23456789","Colón 1234",null));
+        
+        return empleados;
+    }
     public List ObtenerCamiones(){
         List<Camion> camiones = new ArrayList();
         Camion Mercedes_1 = new Camion();

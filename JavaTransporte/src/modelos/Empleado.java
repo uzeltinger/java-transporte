@@ -20,6 +20,14 @@ public class Empleado extends Persona {
         this.puesto = puesto;
     }
 
+    public boolean esChofer(){
+        return this.puesto.equals("Chofer");
+    }
+
+    @Override
+    public String toString() {
+        return this.getNombre();
+    }
     
     
     
